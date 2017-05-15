@@ -1,0 +1,11 @@
+{
+  "0": {
+    "entry_point": ["data", "journeys", {"name": "0", "hash_type": "int"}],
+    "filter": [
+      "date",
+      "time",
+      {"name": "price", "hash_type": "int"},
+      ["bookings", {"name": "0", "hash_type": "int"}, "fare", {"name": "adult", "content_type": "int"}]
+    ]
+  }
+}
