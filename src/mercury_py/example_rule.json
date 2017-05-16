@@ -1,13 +1,19 @@
 {
-  "column_name": ["date", "time", "price", "adult_fare"],
-  "rule": {
+  "column_names": ["booking message", "first name", "title", "pax type", "last name", "birth date"],
+  "rules": {
     "0": {
-      "entry_point": ["data", "journeys", {"name": "0", "hash_type": "int"}],
       "filter": [
-        "date",
-        "time",
-        {"name": "price", "hash_type": "int"},
-        ["bookings", {"name": "0", "hash_type": "int"}, "fare", {"name": "adult", "content_type": "int"}]
+        ["Status", "Message"]
+      ]
+    },
+    "2": {
+      "entry_point": ["Passengers", {"name": "0", "hash_type": "int"}],
+      "filter": [
+        "FirstName",
+        "Title",
+        "PaxType",
+        "LastName",
+        "BirthDate"
       ]
     }
   }
