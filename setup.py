@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='mercury-py',
-    version='0.3.2',
+    version='0.4.0',
     author='Rahmanda Wibowo',
     author_email='rahmandawibowo@gmail.com',
     url='https://github.com/rahmanda/mercury-py',
