@@ -52,7 +52,7 @@ According to this entry point rule `["Passengers", {"name": "0", "hash_type": "i
 If we don't want the program to parse certain field into json, we have to provide `"no_json": true`.
 
 ## Options
-`--csv`: Directory path of consummable csv (required).
-`--rule`: Directory path of json rule (required).
-`--csv-delimiter` : Specify csv delimiter. Default value ',' (optional).
-`--export` : Directory path of exported csv. Default value 'exported_csv.csv' (optional).
+- `--csv`: Directory path of consummable csv (required).
+- `--rule`: Directory path of json rule (required).
+- `--csv-delimiter` : Specify csv delimiter. Default value ',' (optional).
+- `--export` : Directory path of exported csv. Default value 'exported_csv.csv' (optional).
