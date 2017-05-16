@@ -72,9 +72,9 @@ def export_to_csv_file(csv_list, export_path):
 
 def main():
     parser = argparse.ArgumentParser(description='Export JSON to CSV', prog='mercury-py')
-    parser.add_argument('--csv', help='Path of csv file', default='example_csv.csv', action='store')
+    parser.add_argument('--csv', help='Path of csv file', default='./example_csv.csv', action='store')
     parser.add_argument('--csv-delimiter', help='delimiter', default=',', action='store')
-    parser.add_argument('--rule', help='JSON rule to extract json inside your csv file', default='example_rule.json', action='store')
+    parser.add_argument('--rule', help='JSON rule to extract json inside your csv file', default='./example_rule.json', action='store')
     parser.add_argument('--export', help='Where you want to store exported data', default='exported_json.csv', action='store')
 
     args = vars(parser.parse_args())
