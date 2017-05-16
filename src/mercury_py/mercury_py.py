@@ -28,6 +28,8 @@ def filter_data_from_list(json_data, filters):
     return json_data
 
 def extract_data_against_filter(raw_data, rules):
+    if 'no_json' in rules:
+        return [raw_data]
     cleaned_data = []
     parsed_json = json.loads(raw_data)
     if 'entry_point' in rules:
@@ -52,6 +54,7 @@ def read_csv(csv_path, delimiter, rules):
             partial = []
             for key, rule in list(rules.items()):
                 raw_data = row[int(key)]
+                print(raw_data)
                 partial += extract_data_against_filter(raw_data, rule)
             cleaned_csv.append(partial)
     return cleaned_csv

@@ -1,10 +1,13 @@
 {
-  "column_names": ["booking message", "first name", "title", "pax type", "last name", "birth date"],
+  "column_names": ["booking message", "timestamp", "first name", "title", "pax type", "last name", "birth date"],
   "rules": {
     "0": {
       "filter": [
         ["Status", "Message"]
       ]
+    },
+    "1": {
+      "no_json": true
     },
     "2": {
       "entry_point": ["Passengers", {"name": "0", "hash_type": "int"}],
