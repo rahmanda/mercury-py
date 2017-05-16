@@ -70,7 +70,7 @@ def export_to_csv_file(csv_list, export_path):
         writer = csv.writer(output, lineterminator='\n')
         writer.writerows(csv_list)
 
-def main():
+def mercury_py():
     parser = argparse.ArgumentParser(description='Export JSON to CSV', prog='mercury-py')
     parser.add_argument('--csv', help='Path of csv file', default='example_csv.csv', action='store')
     parser.add_argument('--csv-delimiter', help='delimiter', default=',', action='store')
@@ -99,4 +99,4 @@ def main():
     export_to_csv_file(cleaned_csv, export_path)
 
 if __name__ == '__main__':
-    main()
+    mercury_py()
