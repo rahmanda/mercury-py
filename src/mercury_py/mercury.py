@@ -20,7 +20,10 @@ def filter_data_from_dict(json_data, fil):
 def filter_data_from_list(json_data, filters):
     for fil in filters:
         if type(fil) is str or type(fil) is unicode:
-            json_data = json_data[fil]
+            if (fil in json_data):
+                json_data = json_data[fil]
+            else:
+                json_data = ''
         elif type(fil) is dict:
             json_data = filter_data_from_dict(json_data, fil)
         elif type(fil) is list:
@@ -37,7 +40,10 @@ def extract_data_against_filter(raw_data, rules):
     for fil in rules['filter']:
         json_data = parsed_json
         if type(fil) is str or type(fil) is unicode:
-            json_data = json_data[fil]
+            if (fil in json_data):
+                json_data = json_data[fil]
+            else:
+                json_data = ''
         elif type(fil) is dict:
             json_data = filter_data_from_dict(json_data, fil)
         elif type(fil) is list:
