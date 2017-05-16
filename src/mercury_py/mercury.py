@@ -54,7 +54,6 @@ def read_csv(csv_path, delimiter, rules):
             partial = []
             for key, rule in list(rules.items()):
                 raw_data = row[int(key)]
-                print(raw_data)
                 partial += extract_data_against_filter(raw_data, rule)
             cleaned_csv.append(partial)
     return cleaned_csv
